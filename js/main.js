@@ -132,6 +132,7 @@
   const status = document.getElementById("form-status");
 
   if (form) {
+    let submitting = false;
     const validators = {
       name: (value) => value.trim() ? "" : "Please enter your name.",
       email: (value) => {
@@ -157,6 +158,7 @@
 
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
+      if (submitting || form.hidden) return;
       if (status) status.textContent = "";
       const data = new FormData(form);
       let valid = true;
@@ -178,6 +180,9 @@
 
       const button = form.querySelector(".btn");
       const label = button?.querySelector(".btn__label");
+      submitting = true;
+      if (button) button.disabled = true;
+      form.setAttribute("aria-busy", "true");
       button?.classList.add("is-loading");
       if (label) label.textContent = "Sending...";
       const controller = new AbortController();
@@ -207,11 +212,14 @@
           if (window.gsap && !reduceMotion) gsap.fromTo(success, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" });
         }
       } catch {
-        button?.classList.remove("is-loading");
-        if (label) label.textContent = "Send message";
         if (status) status.textContent = "Something went wrong sending your message. Please try again.";
       } finally {
         window.clearTimeout(timeout);
+        submitting = false;
+        button?.classList.remove("is-loading");
+        if (button) button.disabled = false;
+        if (label) label.textContent = "Send message";
+        form.removeAttribute("aria-busy");
       }
     });
   }
