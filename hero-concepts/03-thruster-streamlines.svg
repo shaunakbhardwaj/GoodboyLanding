@@ -1,0 +1,222 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <title>Thruster Streamlines</title>
+  <defs>
+    <linearGradient id="gFeed" gradientUnits="userSpaceOnUse" x1="-30" y1="0" x2="150" y2="0">
+      <stop offset="0" stop-color="#f6f3ee" stop-opacity="0"/>
+      <stop offset="1" stop-color="#f6f3ee" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="gFade" gradientUnits="userSpaceOnUse" x1="930" y1="0" x2="1020" y2="0">
+      <stop offset="0" stop-color="#f6f3ee" stop-opacity="0"/>
+      <stop offset="1" stop-color="#f6f3ee" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="gIn" gradientUnits="userSpaceOnUse" x1="1046" y1="0" x2="1190" y2="0">
+      <stop offset="0" stop-color="#f6f3ee" stop-opacity="0"/>
+      <stop offset="1" stop-color="#f6f3ee" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="gPlume" gradientUnits="userSpaceOnUse" x1="1528" y1="0" x2="1615" y2="0">
+      <stop offset="0" stop-color="#f6f3ee" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#f6f3ee" stop-opacity="0.05"/>
+    </linearGradient>
+    <radialGradient id="gGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#f6f3ee" stop-opacity="0.07"/>
+      <stop offset="0.6" stop-color="#f6f3ee" stop-opacity="0.03"/>
+      <stop offset="1" stop-color="#f6f3ee" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="tone" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="5" r="1.1" fill="#f6f3ee"/>
+    </pattern>
+  </defs>
+
+  <rect x="0" y="0" width="1600" height="1000" fill="#2a2824"/>
+
+  <circle cx="1330" cy="500" r="480" fill="url(#gGlow)">
+    <animate attributeName="opacity" values="0.75;1;0.75" dur="24s" repeatCount="indefinite"/>
+  </circle>
+
+  <rect x="-20" y="-20" width="430" height="180" fill="url(#tone)" opacity="0.08"/>
+  <rect x="1290" y="770" width="330" height="250" fill="url(#tone)" opacity="0.07"/>
+
+  <g fill="none" stroke="#f6f3ee" stroke-width="1" stroke-linecap="round">
+    <path d="M-30,468 C320,468 720,474 1042,482" stroke-opacity="0.06" stroke-dasharray="1.5 20.5">
+      <animate attributeName="stroke-dashoffset" from="0" to="-22" dur="24s" repeatCount="indefinite"/>
+    </path>
+    <path d="M-30,500 C320,500 720,500 1042,500" stroke-opacity="0.065" stroke-dasharray="1.5 20.5">
+      <animate attributeName="stroke-dashoffset" from="0" to="-22" dur="24s" repeatCount="indefinite"/>
+    </path>
+    <path d="M-30,532 C320,532 720,526 1042,518" stroke-opacity="0.06" stroke-dasharray="1.5 20.5">
+      <animate attributeName="stroke-dashoffset" from="0" to="-22" dur="24s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <g fill="none" stroke="#f6f3ee" stroke-width="1" stroke-linecap="round">
+    <path d="M-30,20 C400,22 900,28 1630,38" stroke-opacity="0.07" stroke-dasharray="2 26">
+      <animate attributeName="stroke-dashoffset" from="0" to="-28" dur="24s" repeatCount="indefinite"/>
+    </path>
+    <path d="M-30,980 C400,978 900,972 1630,962" stroke-opacity="0.07" stroke-dasharray="2 26">
+      <animate attributeName="stroke-dashoffset" from="0" to="-28" dur="24s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <g fill="none" stroke="url(#gFeed)" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="2 22">
+    <path d="M-30,62 C300,66 620,96 830,168 C980,222 1062,300 1098,344" stroke-opacity="0.16">
+      <animate attributeName="stroke-dashoffset" from="0" to="-24" dur="21s" repeatCount="indefinite"/>
+    </path>
+    <path d="M-30,140 C320,142 660,180 860,250 C990,298 1058,352 1102,390" stroke-opacity="0.13">
+      <animate attributeName="stroke-dashoffset" from="0" to="-24" dur="22s" repeatCount="indefinite"/>
+    </path>
+    <path d="M-30,215 C330,216 660,248 860,308 C980,348 1060,396 1104,425" stroke-opacity="0.11">
+      <animate attributeName="stroke-dashoffset" from="0" to="-24" dur="23s" repeatCount="indefinite"/>
+    </path>
+    <path d="M-30,938 C300,934 620,904 830,832 C980,778 1062,700 1098,656" stroke-opacity="0.16">
+      <animate attributeName="stroke-dashoffset" from="0" to="-24" dur="21s" repeatCount="indefinite"/>
+    </path>
+    <path d="M-30,860 C320,858 660,820 860,750 C990,702 1058,648 1102,610" stroke-opacity="0.13">
+      <animate attributeName="stroke-dashoffset" from="0" to="-24" dur="22s" repeatCount="indefinite"/>
+    </path>
+    <path d="M-30,785 C330,784 660,752 860,692 C980,652 1060,604 1104,575" stroke-opacity="0.11">
+      <animate attributeName="stroke-dashoffset" from="0" to="-24" dur="23s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <g fill="none" stroke="url(#gFade)" stroke-width="1.2" stroke-linecap="round">
+    <path d="M950,238 C1010,258 1066,312 1102,368" stroke-opacity="0.14" stroke-dasharray="2 22">
+      <animate attributeName="stroke-dashoffset" from="0" to="-24" dur="18s" repeatCount="indefinite"/>
+    </path>
+    <path d="M950,762 C1010,742 1066,688 1102,632" stroke-opacity="0.14" stroke-dasharray="2 22">
+      <animate attributeName="stroke-dashoffset" from="0" to="-24" dur="18s" repeatCount="indefinite"/>
+    </path>
+    <path d="M960,296 C1060,330 1160,382 1250,396 C1380,392 1480,372 1550,344 C1595,326 1625,296 1648,258" stroke-opacity="0.12" stroke-dasharray="2 24">
+      <animate attributeName="stroke-dashoffset" from="0" to="-26" dur="22s" repeatCount="indefinite"/>
+    </path>
+    <path d="M960,704 C1060,670 1160,618 1250,604 C1380,608 1480,628 1550,656 C1595,674 1625,704 1648,742" stroke-opacity="0.12" stroke-dasharray="2 24">
+      <animate attributeName="stroke-dashoffset" from="0" to="-26" dur="22s" repeatCount="indefinite"/>
+    </path>
+    <path d="M1002,418 C1012,372 1034,338 1064,314" stroke-opacity="0.1" stroke-dasharray="1 9">
+      <animate attributeName="stroke-dashoffset" from="0" to="-10" dur="20s" repeatCount="indefinite"/>
+    </path>
+    <path d="M1002,582 C1012,628 1034,662 1064,686" stroke-opacity="0.1" stroke-dasharray="1 9">
+      <animate attributeName="stroke-dashoffset" from="0" to="-10" dur="20s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <g fill="none" stroke="#f6f3ee" stroke-width="1" stroke-linecap="round">
+    <g transform="translate(1330,500) scale(1.055) translate(-1330,-500)" stroke-opacity="0.15">
+      <path d="M1102,332 C1140,352 1172,448 1222,452 C1272,452 1462,366 1560,378"/>
+      <path d="M1102,668 C1140,648 1172,552 1222,548 C1272,548 1462,634 1560,622"/>
+    </g>
+    <g transform="translate(1330,500) scale(0.955) translate(-1330,-500)" stroke-opacity="0.2">
+      <path d="M1102,332 C1140,352 1172,448 1222,452 C1272,452 1462,366 1560,378"/>
+      <path d="M1102,668 C1140,648 1172,552 1222,548 C1272,548 1462,634 1560,622"/>
+    </g>
+    <g transform="translate(1330,500) scale(0.9) translate(-1330,-500)" stroke-opacity="0.12">
+      <path d="M1102,332 C1140,352 1172,448 1222,452 C1272,452 1462,366 1560,378"/>
+      <path d="M1102,668 C1140,648 1172,552 1222,548 C1272,548 1462,634 1560,622"/>
+    </g>
+  </g>
+
+  <g fill="none" stroke="#f6f3ee" stroke-linecap="round">
+    <path d="M1102,332 C1140,352 1172,448 1222,452 C1272,452 1462,366 1560,378" stroke-opacity="0.68" stroke-width="2"/>
+    <path d="M1102,668 C1140,648 1172,552 1222,548 C1272,548 1462,634 1560,622" stroke-opacity="0.68" stroke-width="2"/>
+    <path d="M1102,320 V680" stroke-opacity="0.14" stroke-width="1" stroke-dasharray="5 9"/>
+    <path d="M1530,362 V638" stroke="#d6c4a8" stroke-opacity="0.25" stroke-width="1" stroke-dasharray="5 9"/>
+    <path d="M1536,500 H1600" stroke-opacity="0.16" stroke-width="1" stroke-dasharray="20 12 5 12"/>
+    <path d="M1222,434 V452 M1222,548 V566" stroke-opacity="0.45" stroke-width="1.5"/>
+    <path d="M1044,296 h16 M1052,288 v16" stroke-opacity="0.28" stroke-width="1"/>
+    <path d="M1472,330 h16 M1480,322 v16" stroke-opacity="0.28" stroke-width="1"/>
+    <path d="M1492,672 h16 M1500,664 v16" stroke-opacity="0.28" stroke-width="1"/>
+    <circle cx="1222" cy="452" r="5" stroke-opacity="0.35" stroke-width="1"/>
+    <path d="M1226,447 L1258,416 L1302,416" stroke-opacity="0.3" stroke-width="1"/>
+    <circle cx="1400" cy="596" r="4" stroke-opacity="0.35" stroke-width="1"/>
+    <path d="M1403,600 L1436,636 L1478,636" stroke-opacity="0.3" stroke-width="1"/>
+  </g>
+
+  <g fill="none" stroke="url(#gIn)" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="3 24">
+    <path d="M1050,396 C1128,398 1178,461 1222,461" stroke-opacity="0.5">
+      <animate attributeName="stroke-dashoffset" from="0" to="-27" dur="12s" repeatCount="indefinite"/>
+    </path>
+    <path d="M1050,448 C1128,449 1180,481 1222,481" stroke-opacity="0.62">
+      <animate attributeName="stroke-dashoffset" from="0" to="-27" dur="13s" repeatCount="indefinite"/>
+    </path>
+    <path d="M1050,500 L1222,500" stroke-opacity="0.72">
+      <animate attributeName="stroke-dashoffset" from="0" to="-27" dur="11.5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M1050,552 C1128,551 1180,519 1222,519" stroke-opacity="0.62">
+      <animate attributeName="stroke-dashoffset" from="0" to="-27" dur="13s" repeatCount="indefinite"/>
+    </path>
+    <path d="M1050,604 C1128,602 1178,539 1222,539" stroke-opacity="0.5">
+      <animate attributeName="stroke-dashoffset" from="0" to="-27" dur="12s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <g fill="none" stroke="#f6f3ee" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="4 25">
+    <path d="M1222,461 C1280,460 1372,440 1530,412" stroke-opacity="0.55">
+      <animate attributeName="stroke-dashoffset" from="0" to="-29" dur="8s" repeatCount="indefinite"/>
+    </path>
+    <path d="M1222,481 C1280,480 1374,468 1530,456" stroke-opacity="0.68">
+      <animate attributeName="stroke-dashoffset" from="0" to="-29" dur="8.5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M1222,500 L1530,500" stroke-opacity="0.8">
+      <animate attributeName="stroke-dashoffset" from="0" to="-29" dur="7.5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M1222,519 C1280,519 1374,532 1530,544" stroke-opacity="0.68">
+      <animate attributeName="stroke-dashoffset" from="0" to="-29" dur="8.5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M1222,539 C1280,540 1372,560 1530,588" stroke-opacity="0.55">
+      <animate attributeName="stroke-dashoffset" from="0" to="-29" dur="8s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <g fill="none" stroke="#f6f3ee" stroke-width="1.5">
+    <ellipse cx="1222" cy="500" rx="34" ry="9" opacity="0" stroke="#d6c4a8">
+      <animate attributeName="rx" values="34;176" dur="12s" begin="0s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines="0.3 0.55 0.55 1"/>
+      <animate attributeName="ry" values="9;46" dur="12s" begin="0s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines="0.3 0.55 0.55 1"/>
+      <animate attributeName="opacity" values="0.3;0" dur="12s" begin="0s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines="0.3 0.55 0.55 1"/>
+    </ellipse>
+    <ellipse cx="1222" cy="500" rx="34" ry="9" opacity="0">
+      <animate attributeName="rx" values="34;176" dur="12s" begin="-4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines="0.3 0.55 0.55 1"/>
+      <animate attributeName="ry" values="9;46" dur="12s" begin="-4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines="0.3 0.55 0.55 1"/>
+      <animate attributeName="opacity" values="0.36;0" dur="12s" begin="-4s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines="0.3 0.55 0.55 1"/>
+    </ellipse>
+    <ellipse cx="1222" cy="500" rx="34" ry="9" opacity="0">
+      <animate attributeName="rx" values="34;176" dur="12s" begin="-8s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines="0.3 0.55 0.55 1"/>
+      <animate attributeName="ry" values="9;46" dur="12s" begin="-8s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines="0.3 0.55 0.55 1"/>
+      <animate attributeName="opacity" values="0.36;0" dur="12s" begin="-8s" repeatCount="indefinite" calcMode="spline" keyTimes="0;1" keySplines="0.3 0.55 0.55 1"/>
+    </ellipse>
+    <ellipse cx="1310" cy="500" rx="215" ry="125" opacity="0.07" stroke-width="1">
+      <animate attributeName="opacity" values="0.05;0.11;0.05" dur="24s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <g fill="none" stroke="url(#gPlume)" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="5 41">
+    <path d="M1530,390 C1566,384 1604,377 1648,371" stroke-opacity="0.45">
+      <animate attributeName="stroke-dashoffset" from="0" to="-46" dur="6s" repeatCount="indefinite"/>
+    </path>
+    <path d="M1530,412 C1568,407 1608,401 1648,395" stroke-opacity="0.55">
+      <animate attributeName="stroke-dashoffset" from="0" to="-46" dur="6.2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M1530,456 C1568,453 1608,449 1648,445" stroke-opacity="0.65">
+      <animate attributeName="stroke-dashoffset" from="0" to="-46" dur="6.4s" repeatCount="indefinite"/>
+    </path>
+    <path d="M1530,500 L1648,500" stroke-opacity="0.75">
+      <animate attributeName="stroke-dashoffset" from="0" to="-46" dur="6s" repeatCount="indefinite"/>
+    </path>
+    <path d="M1530,544 C1568,547 1608,551 1648,555" stroke-opacity="0.65">
+      <animate attributeName="stroke-dashoffset" from="0" to="-46" dur="6.4s" repeatCount="indefinite"/>
+    </path>
+    <path d="M1530,588 C1568,593 1608,599 1648,605" stroke-opacity="0.55">
+      <animate attributeName="stroke-dashoffset" from="0" to="-46" dur="6.2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M1530,610 C1566,616 1604,623 1648,629" stroke-opacity="0.45">
+      <animate attributeName="stroke-dashoffset" from="0" to="-46" dur="6s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <g fill="none" stroke-width="1.2" stroke-linejoin="round">
+    <polygon points="1552,500 1563,487 1574,500 1563,513" stroke="#d6c4a8" opacity="0.3">
+      <animate attributeName="opacity" values="0.16;0.4;0.16" dur="7s" repeatCount="indefinite"/>
+    </polygon>
+    <polygon points="1574,500 1583,489 1592,500 1583,511" stroke="#f6f3ee" opacity="0.22">
+      <animate attributeName="opacity" values="0.12;0.3;0.12" dur="7s" begin="-3.5s" repeatCount="indefinite"/>
+    </polygon>
+  </g>
+</svg>

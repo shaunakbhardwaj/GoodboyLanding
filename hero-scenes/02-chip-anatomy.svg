@@ -1,0 +1,230 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <!--
+    Goodboy Dynamics - hero scene 02 "Anatomie d'une puce" (exploded chip, STATIC)
+    Axonometric projection: depth vector (+0.5, +0.288) per plan-depth unit.
+    Animatable groups (suggested motions):
+      layer-lid        : rise 24px + fade to 0.6 on scroll
+      layer-die        : rise 20px + slow halftone opacity breathe (0.10-0.18)
+      layer-interposer : rise 16px + slight x-drift (-8px)
+      layer-substrate  : rise 12px
+      layer-pins       : rise 8px + staggered drop-in per pin
+      accent-path      : draw-on via stroke-dashoffset after layers settle
+      leaders          : draw-on (dashoffset) once stack is assembled
+      axis             : slow parallax opposite scroll (0.3x)
+      ruler            : slow parallax with axis
+      plate-marks      : deepest parallax layer (0.15x)
+  -->
+  <defs>
+    <pattern id="halftone" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(12)">
+      <circle cx="1.8" cy="1.8" r="1" fill="#f6f3ee" fill-opacity="0.16"/>
+    </pattern>
+    <pattern id="tickpat" width="10" height="20" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="10" x2="7" y2="10" stroke="#f6f3ee" stroke-opacity="0.28" stroke-width="1"/>
+    </pattern>
+    <g id="pin">
+      <line x1="0" y1="0" x2="0" y2="28" stroke="#f6f3ee" stroke-opacity="0.55" stroke-width="1.5"/>
+      <ellipse cx="0" cy="29.5" rx="6" ry="2.4" fill="none" stroke="#f6f3ee" stroke-opacity="0.55" stroke-width="1.5"/>
+    </g>
+  </defs>
+
+  <!-- full-bleed background -->
+  <rect x="0" y="0" width="1600" height="1000" fill="#2a2824"/>
+
+  <!-- museum-plate registration marks, left third (airy negative space) -->
+  <g id="plate-marks" stroke="#f6f3ee" fill="none" stroke-width="1">
+    <g opacity="0.14">
+      <line x1="138" y1="170" x2="162" y2="170"/>
+      <line x1="150" y1="158" x2="150" y2="182"/>
+      <circle cx="150" cy="170" r="8"/>
+    </g>
+    <g opacity="0.10">
+      <line x1="198" y1="742" x2="222" y2="742"/>
+      <line x1="210" y1="730" x2="210" y2="754"/>
+      <circle cx="210" cy="742" r="8"/>
+    </g>
+    <line x1="80" y1="500" x2="420" y2="500" opacity="0.08"/>
+  </g>
+
+  <!-- central dashed alignment axis of the exploded stack -->
+  <g id="axis">
+    <line x1="1315" y1="44" x2="1315" y2="812" stroke="#f6f3ee" stroke-opacity="0.14" stroke-width="1" stroke-dasharray="10 8"/>
+  </g>
+
+  <!-- measurement ruler along far right edge -->
+  <g id="ruler">
+    <rect x="1576" y="80" width="8" height="840" fill="url(#tickpat)"/>
+    <line x1="1576" y1="80" x2="1576" y2="920" stroke="#f6f3ee" stroke-opacity="0.4" stroke-width="1.2"/>
+    <g stroke="#f6f3ee" stroke-opacity="0.35" stroke-width="1">
+      <line x1="1576" y1="100" x2="1593" y2="100"/>
+      <line x1="1576" y1="200" x2="1593" y2="200"/>
+      <line x1="1576" y1="300" x2="1593" y2="300"/>
+      <line x1="1576" y1="400" x2="1593" y2="400"/>
+      <line x1="1576" y1="500" x2="1593" y2="500"/>
+      <line x1="1576" y1="600" x2="1593" y2="600"/>
+      <line x1="1576" y1="700" x2="1593" y2="700"/>
+      <line x1="1576" y1="800" x2="1593" y2="800"/>
+      <line x1="1576" y1="900" x2="1593" y2="900"/>
+    </g>
+    <line x1="1568" y1="80" x2="1584" y2="80" stroke="#f6f3ee" stroke-opacity="0.4" stroke-width="1"/>
+    <line x1="1568" y1="920" x2="1584" y2="920" stroke="#f6f3ee" stroke-opacity="0.4" stroke-width="1"/>
+  </g>
+
+  <!-- leader lines and tick marks connecting the layers -->
+  <g id="leaders" stroke="#f6f3ee" fill="none">
+    <line x1="1040" y1="60" x2="1040" y2="780" stroke-opacity="0.45" stroke-width="1"/>
+    <line x1="1035" y1="60" x2="1045" y2="60" stroke-opacity="0.45" stroke-width="1"/>
+    <line x1="1035" y1="780" x2="1045" y2="780" stroke-opacity="0.45" stroke-width="1"/>
+    <g stroke-opacity="0.3" stroke-width="1" stroke-dasharray="3 4">
+      <line x1="1052" y1="101" x2="1144" y2="101"/>
+      <line x1="1052" y1="321" x2="1181" y2="321"/>
+      <line x1="1052" y1="538" x2="1163" y2="538"/>
+      <line x1="1052" y1="717" x2="1144" y2="717"/>
+    </g>
+    <g stroke-opacity="0.6" stroke-width="1">
+      <circle cx="1040" cy="101" r="3"/>
+      <circle cx="1040" cy="321" r="3"/>
+      <circle cx="1040" cy="538" r="3"/>
+      <circle cx="1040" cy="717" r="3"/>
+    </g>
+    <g stroke-opacity="0.18" stroke-width="1" stroke-dasharray="3 5">
+      <line x1="1556" y1="139" x2="1576" y2="139"/>
+      <line x1="1436" y1="343" x2="1576" y2="343"/>
+      <line x1="1488" y1="566" x2="1576" y2="566"/>
+      <line x1="1556" y1="755" x2="1576" y2="755"/>
+    </g>
+  </g>
+
+  <!-- LAYER 1: heat spreader lid -->
+  <g id="layer-lid" stroke="#f6f3ee" fill="none">
+    <path d="M1420 64 L1550 139 L1550 165 L1420 90 Z" fill="#f6f3ee" fill-opacity="0.035" stroke-opacity="0.6" stroke-width="1.5"/>
+    <path d="M1210 139 L1550 139 L1550 165 L1210 165 Z" fill="#f6f3ee" fill-opacity="0.035" stroke-opacity="0.7" stroke-width="1.5"/>
+    <path d="M1080 64 L1420 64 L1550 139 L1210 139 Z" fill="#2a2824" stroke-opacity="0.95" stroke-width="2.2"/>
+    <path d="M1113 70 L1409 70 L1517 133 L1221 133 Z" stroke-opacity="0.35" stroke-width="1"/>
+    <g stroke-opacity="0.3" stroke-width="1">
+      <line x1="1155" y1="84" x2="1415" y2="84"/>
+      <line x1="1175" y1="96" x2="1435" y2="96"/>
+      <line x1="1195" y1="107" x2="1455" y2="107"/>
+    </g>
+    <line x1="1485" y1="102" x2="1485" y2="127" stroke-opacity="0.3" stroke-width="1"/>
+    <line x1="1210" y1="152" x2="1550" y2="152" stroke-opacity="0.25" stroke-width="1"/>
+  </g>
+
+  <!-- LAYER 2: silicon die (halftone screentone + faint circuit pattern) -->
+  <g id="layer-die" stroke="#f6f3ee" fill="none">
+    <path d="M1355 300 L1430 343 L1430 355 L1355 312 Z" fill="#f6f3ee" fill-opacity="0.05" stroke-opacity="0.6" stroke-width="1.5"/>
+    <path d="M1220 343 L1430 343 L1430 355 L1220 355 Z" fill="#f6f3ee" fill-opacity="0.05" stroke-opacity="0.7" stroke-width="1.5"/>
+    <path d="M1145 300 L1355 300 L1430 343 L1220 343 Z" fill="#2a2824" stroke-opacity="0.95" stroke-width="2.2"/>
+    <path d="M1145 300 L1355 300 L1430 343 L1220 343 Z" fill="url(#halftone)" stroke="none"/>
+    <g stroke-opacity="0.4" stroke-width="1">
+      <path d="M1163 308 H1190 L1204 322 H1252"/>
+      <path d="M1177 316 H1198 L1210 328 H1263"/>
+      <path d="M1362 306 H1332 L1320 318 H1316"/>
+      <path d="M1376 314 H1340 L1329 325 H1327"/>
+      <path d="M1390 322 H1354 L1342 334 H1300"/>
+    </g>
+    <path d="M1237 313 L1307 313 L1337 330 L1267 330 Z" fill="#2a2824" stroke-opacity="0.8" stroke-width="1.5"/>
+    <path d="M1245 316 L1298 316 L1312 326 L1259 326 Z" stroke-opacity="0.35" stroke-width="1"/>
+    <g stroke-opacity="0.5" stroke-width="1">
+      <circle cx="1159" cy="308" r="2.2"/>
+      <circle cx="1173" cy="316" r="2.2"/>
+      <circle cx="1365" cy="306" r="2.2"/>
+      <circle cx="1379" cy="314" r="2.2"/>
+      <circle cx="1393" cy="322" r="2.2"/>
+    </g>
+  </g>
+
+  <!-- LAYER 3: interposer (silicon bridge with TSV row) -->
+  <g id="layer-interposer" stroke="#f6f3ee" fill="none">
+    <path d="M1385 510 L1482 566 L1482 576 L1385 520 Z" fill="#f6f3ee" fill-opacity="0.04" stroke-opacity="0.6" stroke-width="1.5"/>
+    <path d="M1212 566 L1482 566 L1482 576 L1212 576 Z" fill="#f6f3ee" fill-opacity="0.04" stroke-opacity="0.7" stroke-width="1.5"/>
+    <path d="M1115 510 L1385 510 L1482 566 L1212 566 Z" fill="#2a2824" stroke-opacity="0.9" stroke-width="2"/>
+    <path d="M1136 514 L1378 514 L1461 562 L1219 562 Z" stroke-opacity="0.3" stroke-width="1"/>
+    <g stroke-opacity="0.4" stroke-width="1">
+      <circle cx="1216" cy="571" r="1.5"/>
+      <circle cx="1240" cy="571" r="1.5"/>
+      <circle cx="1264" cy="571" r="1.5"/>
+      <circle cx="1288" cy="571" r="1.5"/>
+      <circle cx="1312" cy="571" r="1.5"/>
+      <circle cx="1360" cy="571" r="1.5"/>
+      <circle cx="1384" cy="571" r="1.5"/>
+      <circle cx="1408" cy="571" r="1.5"/>
+      <circle cx="1432" cy="571" r="1.5"/>
+      <circle cx="1456" cy="571" r="1.5"/>
+      <circle cx="1480" cy="571" r="1.5"/>
+    </g>
+    <circle cx="1336" cy="571" r="1.8" stroke="#d6c4a8" stroke-opacity="0.6" stroke-width="1.2"/>
+  </g>
+
+  <!-- LAYER 4: substrate with fan-out routing traces -->
+  <g id="layer-substrate" stroke="#f6f3ee" fill="none">
+    <path d="M1420 680 L1550 755 L1550 775 L1420 700 Z" fill="#f6f3ee" fill-opacity="0.035" stroke-opacity="0.6" stroke-width="1.5"/>
+    <path d="M1210 755 L1550 755 L1550 775 L1210 775 Z" fill="#f6f3ee" fill-opacity="0.035" stroke-opacity="0.7" stroke-width="1.5"/>
+    <path d="M1080 680 L1420 680 L1550 755 L1210 755 Z" fill="#2a2824" stroke-opacity="0.95" stroke-width="2.2"/>
+    <path d="M1172 696 L1382 696 L1457 739 L1247 739 Z" stroke-opacity="0.28" stroke-width="1" stroke-dasharray="4 4"/>
+    <g stroke-opacity="0.42" stroke-width="1">
+      <path d="M1240 708 H1204 L1191 721 L1156 721"/>
+      <path d="M1245 716 H1210 L1198 728 L1164 728"/>
+      <path d="M1250 724 H1216 L1205 735 L1172 735"/>
+      <path d="M1305 700 H1342 L1356 714 L1440 714"/>
+      <path d="M1300 708 H1337 L1350 721 L1450 721"/>
+      <path d="M1295 716 H1332 L1344 728 L1460 728"/>
+      <path d="M1290 724 H1327 L1338 735 L1470 735"/>
+    </g>
+    <g stroke-opacity="0.55" stroke-width="1">
+      <circle cx="1156" cy="721" r="2"/>
+      <circle cx="1164" cy="728" r="2"/>
+      <circle cx="1172" cy="735" r="2"/>
+      <circle cx="1440" cy="714" r="2"/>
+      <circle cx="1450" cy="721" r="2"/>
+      <circle cx="1460" cy="728" r="2"/>
+      <circle cx="1470" cy="735" r="2"/>
+    </g>
+  </g>
+
+  <!-- highlighted signal path threading die -> interposer -> substrate -->
+  <g id="accent-path" fill="none" stroke="#d6c4a8">
+    <path d="M1159 304 H1186 L1201 319 H1251" stroke-opacity="0.85" stroke-width="1.5"/>
+    <circle cx="1156" cy="304" r="3" stroke-opacity="0.85" stroke-width="1.5"/>
+    <path d="M1252 356 L1252 695" stroke-opacity="0.5" stroke-width="1.5" stroke-dasharray="2 7"/>
+    <path d="M1235 700 H1198 L1184 714 L1148 714" stroke-opacity="0.85" stroke-width="1.5"/>
+    <circle cx="1148" cy="714" r="2.5" stroke-opacity="0.85" stroke-width="1.5"/>
+  </g>
+
+  <!-- LAYER 5: pin grid array -->
+  <g id="layer-pins">
+    <g fill="none" stroke="#f6f3ee" stroke-width="1.5">
+      <ellipse cx="1312" cy="836" rx="230" ry="22" stroke-opacity="0.08"/>
+      <ellipse cx="1312" cy="836" rx="150" ry="14" stroke-opacity="0.05"/>
+    </g>
+    <use href="#pin" x="1145" y="709"/>
+    <use href="#pin" x="1195" y="709"/>
+    <use href="#pin" x="1245" y="709"/>
+    <use href="#pin" x="1295" y="709"/>
+    <use href="#pin" x="1345" y="709"/>
+    <use href="#pin" x="1395" y="709"/>
+    <use href="#pin" x="1170" y="723"/>
+    <use href="#pin" x="1220" y="723"/>
+    <use href="#pin" x="1270" y="723"/>
+    <use href="#pin" x="1320" y="723"/>
+    <use href="#pin" x="1370" y="723"/>
+    <use href="#pin" x="1420" y="723"/>
+    <use href="#pin" x="1195" y="737"/>
+    <use href="#pin" x="1245" y="737"/>
+    <use href="#pin" x="1295" y="737"/>
+    <use href="#pin" x="1345" y="737"/>
+    <use href="#pin" x="1395" y="737"/>
+    <use href="#pin" x="1445" y="737"/>
+    <use href="#pin" x="1220" y="752"/>
+    <use href="#pin" x="1270" y="752"/>
+    <use href="#pin" x="1320" y="752"/>
+    <use href="#pin" x="1370" y="752"/>
+    <use href="#pin" x="1420" y="752"/>
+    <use href="#pin" x="1470" y="752"/>
+    <use href="#pin" x="1245" y="766"/>
+    <use href="#pin" x="1295" y="766"/>
+    <use href="#pin" x="1345" y="766"/>
+    <use href="#pin" x="1395" y="766"/>
+    <use href="#pin" x="1445" y="766"/>
+    <use href="#pin" x="1495" y="766"/>
+  </g>
+</svg>

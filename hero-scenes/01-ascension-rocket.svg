@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" role="img" aria-label="L Ascension - line-art rocket rising through layered clouds">
+  <!--
+    L'ASCENSION - static hero scenery for Goodboy Dynamics (Matisse line economy x Cassandre machine-age poise)
+    Named animatable layers, back to front, with suggested motion:
+      sky-scale    : fixed altitude ruler; ticks could count upward on scroll
+      halo         : slow 2-3 degree rotation, or gentle opacity breathe
+      stars        : very slow twinkle via opacity
+      clouds-back  : slow horizontal drift left, ~60s loop
+      clouds-mid   : slower counter-drift right, ~90s loop
+      rocket       : subtle vertical translate + rotation on scroll
+      plume        : dash shimmer on the mach diamonds, scale pulse on core lines
+      clouds-front : gentle drift left, ~45s loop, with slight vertical bob
+    Central zone (x 480-1120, y 280-720) kept calm for the logo; clouds there are faint contours only.
+  -->
+  <rect x="0" y="0" width="1600" height="1000" fill="#2a2824"/>
+  <g id="scene" fill="none" stroke="#f6f3ee" stroke-linecap="round" stroke-linejoin="round">
+
+    <g id="halo">
+      <circle cx="1220" cy="420" r="340" stroke-opacity="0.07" stroke-width="1.5"/>
+      <circle cx="1220" cy="420" r="262" stroke-opacity="0.05" stroke-width="1"/>
+      <circle cx="1220" cy="420" r="340" stroke="#d6c4a8" stroke-opacity="0.22" stroke-width="1.5" stroke-dasharray="150 1986" stroke-dashoffset="1650"/>
+    </g>
+
+    <g id="stars">
+      <circle cx="260" cy="140" r="1.6" stroke-opacity="0.35" stroke-width="1"/>
+      <circle cx="410" cy="90" r="1.2" stroke-opacity="0.25" stroke-width="1"/>
+      <circle cx="560" cy="160" r="1.4" stroke-opacity="0.3" stroke-width="1"/>
+      <circle cx="700" cy="80" r="1.1" stroke-opacity="0.22" stroke-width="1"/>
+      <circle cx="840" cy="140" r="1.5" stroke-opacity="0.3" stroke-width="1"/>
+      <circle cx="1010" cy="100" r="1.2" stroke-opacity="0.24" stroke-width="1"/>
+      <circle cx="1150" cy="170" r="1.3" stroke-opacity="0.28" stroke-width="1"/>
+      <circle cx="1330" cy="120" r="1.5" stroke-opacity="0.32" stroke-width="1"/>
+      <circle cx="1470" cy="200" r="1.2" stroke-opacity="0.26" stroke-width="1"/>
+      <circle cx="1520" cy="90" r="1.4" stroke-opacity="0.3" stroke-width="1"/>
+      <circle cx="180" cy="240" r="1.2" stroke-opacity="0.22" stroke-width="1"/>
+      <circle cx="350" cy="230" r="1.1" stroke-opacity="0.2" stroke-width="1"/>
+      <circle cx="940" cy="210" r="1.2" stroke-opacity="0.2" stroke-width="1"/>
+      <path d="M 620 70 v 14 M 613 77 h 14" stroke-opacity="0.4" stroke-width="1"/>
+      <path d="M 1380 250 v 12 M 1374 256 h 12" stroke-opacity="0.35" stroke-width="1"/>
+      <path d="M 210 170 v 10 M 205 175 h 10" stroke-opacity="0.3" stroke-width="1"/>
+    </g>
+
+    <g id="sky-scale">
+      <path d="M 96 96 V 928" stroke-opacity="0.38" stroke-width="1.5"/>
+      <path d="M 88 128 V 892" stroke-opacity="0.14" stroke-width="1"/>
+      <path d="M 90 96 H 102 M 90 928 H 102" stroke-opacity="0.5" stroke-width="1"/>
+      <path d="M 96 116 h 13 M 96 156 h 13 M 96 196 h 13 M 96 276 h 13 M 96 316 h 13 M 96 356 h 13 M 96 396 h 13 M 96 476 h 13 M 96 516 h 13 M 96 556 h 13 M 96 596 h 13 M 96 676 h 13 M 96 716 h 13 M 96 756 h 13 M 96 796 h 13 M 96 876 h 13 M 96 916 h 13" stroke-opacity="0.32" stroke-width="1"/>
+      <path d="M 96 236 h 26 M 96 436 h 26 M 96 636 h 26 M 96 836 h 26" stroke-opacity="0.5" stroke-width="1.5"/>
+      <rect x="106" y="234.5" width="3.5" height="3.5" fill="#d6c4a8" stroke="none" fill-opacity="0.7"/>
+      <rect x="106" y="434.5" width="3.5" height="3.5" fill="#d6c4a8" stroke="none" fill-opacity="0.7"/>
+      <rect x="106" y="634.5" width="3.5" height="3.5" fill="#d6c4a8" stroke="none" fill-opacity="0.7"/>
+      <rect x="106" y="834.5" width="3.5" height="3.5" fill="#d6c4a8" stroke="none" fill-opacity="0.7"/>
+      <path d="M 96 68 V 84 M 88 76 H 104" stroke-opacity="0.3" stroke-width="1"/>
+    </g>
+
+    <g id="clouds-back">
+      <path d="M 300 96 C 400 84 500 108 610 96 C 720 84 830 108 940 97 C 1050 86 1160 106 1270 95 C 1340 88 1400 98 1450 92" stroke-opacity="0.13" stroke-width="1.5"/>
+      <path d="M 360 122 C 460 112 560 132 670 122 C 780 112 890 132 1000 123 C 1090 116 1180 128 1260 121" stroke-opacity="0.08" stroke-width="1"/>
+      <path d="M 180 158 C 300 144 440 172 570 158 C 700 144 840 172 970 159 C 1100 146 1240 168 1370 156 C 1440 150 1500 160 1552 154" stroke-opacity="0.1" stroke-width="1.5"/>
+      <path d="M 240 186 C 360 174 500 198 630 186" stroke-opacity="0.06" stroke-width="1"/>
+      <path d="M 430 232 C 540 222 660 244 780 232 C 900 220 1020 244 1140 233 C 1230 225 1310 240 1370 233" stroke-opacity="0.08" stroke-width="1"/>
+    </g>
+
+    <g id="clouds-mid">
+      <path d="M 240 344 C 360 332 480 356 600 344 C 720 332 840 356 960 345 C 1060 336 1140 350 1188 344" stroke-opacity="0.1" stroke-width="1.5"/>
+      <path d="M 168 356 C 210 344 258 366 304 354" stroke-opacity="0.3" stroke-width="2"/>
+      <path d="M 190 378 C 226 368 266 386 306 376" stroke-opacity="0.2" stroke-width="1.5"/>
+      <path d="M 300 452 C 420 440 540 464 660 452 C 780 440 900 464 1020 453 C 1100 446 1160 456 1200 451" stroke-opacity="0.09" stroke-width="1.5"/>
+      <path d="M 1348 528 C 1392 518 1438 538 1484 527" stroke-opacity="0.26" stroke-width="2"/>
+      <path d="M 1372 550 C 1408 542 1446 558 1488 549" stroke-opacity="0.16" stroke-width="1.5"/>
+    </g>
+
+    <g id="rocket" transform="rotate(-4 1220 430)">
+      <path d="M 1220 118 C 1203 162 1190 232 1188 302 L 1188 560 C 1188 592 1196 630 1202 660 L 1194 678 L 1246 678 L 1238 660 C 1244 630 1252 592 1252 560 L 1252 302 C 1250 232 1237 162 1220 118 Z" fill="#f6f3ee" fill-opacity="0.06" stroke-opacity="0.95" stroke-width="2.5"/>
+      <path d="M 1188 302 Q 1220 312 1252 302" stroke="#d6c4a8" stroke-opacity="0.8" stroke-width="1.5"/>
+      <path d="M 1210 168 C 1200 204 1193 244 1191 282" stroke="#d6c4a8" stroke-opacity="0.5" stroke-width="1"/>
+      <circle cx="1220" cy="372" r="13" stroke-opacity="0.85" stroke-width="2"/>
+      <circle cx="1220" cy="372" r="5.5" stroke-opacity="0.5" stroke-width="1"/>
+      <path d="M 1208 326 h 24 M 1208 336 h 24 M 1208 346 h 24" stroke="#d6c4a8" stroke-opacity="0.65" stroke-width="1.5"/>
+      <path d="M 1189 428 Q 1220 436 1251 428 M 1189 478 Q 1220 486 1251 478 M 1189 528 Q 1220 536 1251 528" stroke-opacity="0.28" stroke-width="1"/>
+      <path d="M 1188 542 C 1156 566 1140 616 1136 670 L 1146 674 C 1156 644 1172 622 1196 610 L 1188 542 Z" fill="#d6c4a8" fill-opacity="0.16" stroke-opacity="0.8" stroke-width="2"/>
+      <path d="M 1252 542 C 1284 566 1300 616 1304 670 L 1294 674 C 1284 644 1268 622 1244 610 L 1252 542 Z" fill="#d6c4a8" fill-opacity="0.16" stroke-opacity="0.8" stroke-width="2"/>
+      <path d="M 1176 592 C 1164 612 1156 636 1152 660" stroke-opacity="0.4" stroke-width="1"/>
+      <path d="M 1264 592 C 1276 612 1284 636 1288 660" stroke-opacity="0.4" stroke-width="1"/>
+    </g>
+
+    <g id="plume" transform="rotate(-4 1220 430)">
+      <path d="M 1194 690 C 1152 798 1104 898 1058 1024" stroke-opacity="0.28" stroke-width="1.5"/>
+      <path d="M 1246 690 C 1288 798 1336 898 1382 1024" stroke-opacity="0.28" stroke-width="1.5"/>
+      <path d="M 1202 678 C 1174 780 1144 884 1112 1008" stroke-opacity="0.55" stroke-width="2"/>
+      <path d="M 1238 678 C 1266 780 1296 884 1328 1008" stroke-opacity="0.55" stroke-width="2"/>
+      <path d="M 1213 692 C 1204 798 1196 902 1186 1012" stroke="#d6c4a8" stroke-opacity="0.4" stroke-width="1.5"/>
+      <path d="M 1227 692 C 1236 798 1244 902 1254 1012" stroke="#d6c4a8" stroke-opacity="0.4" stroke-width="1.5"/>
+      <path d="M 1220 736 L 1244 760 L 1220 784 L 1196 760 Z" stroke-opacity="0.85" stroke-width="1.5"/>
+      <path d="M 1220 744 L 1232 760 L 1220 776 L 1208 760 Z" stroke="#d6c4a8" stroke-opacity="0.5" stroke-width="1"/>
+      <path d="M 1220 788 L 1242 810 L 1220 832 L 1198 810 Z" stroke-opacity="0.7" stroke-width="1.5"/>
+      <path d="M 1220 836 L 1239 856 L 1220 876 L 1201 856 Z" stroke-opacity="0.58" stroke-width="1.5"/>
+      <path d="M 1220 880 L 1236 898 L 1220 916 L 1204 898 Z" stroke-opacity="0.46" stroke-width="1.5"/>
+      <path d="M 1220 920 L 1233 936 L 1220 952 L 1207 936 Z" stroke-opacity="0.36" stroke-width="1.5"/>
+      <path d="M 1220 956 L 1230 970 L 1220 984 L 1210 970 Z" stroke-opacity="0.27" stroke-width="1.5"/>
+      <path d="M 1220 988 L 1228 999 L 1220 1010 L 1212 999 Z" stroke-opacity="0.2" stroke-width="1.5"/>
+      <path d="M 1152 810 Q 1186 824 1220 810 T 1288 810" stroke-opacity="0.3" stroke-width="1.5"/>
+      <path d="M 1128 862 Q 1174 880 1220 862 T 1312 862" stroke-opacity="0.26" stroke-width="1.5"/>
+      <path d="M 1104 916 Q 1162 938 1220 916 T 1336 916" stroke-opacity="0.22" stroke-width="1.5"/>
+      <path d="M 1080 972 Q 1150 998 1220 972 T 1360 972" stroke-opacity="0.18" stroke-width="1.5"/>
+      <path d="M 1186 730 l -14 -8 M 1256 742 l 14 -10 M 1170 790 l -16 -4 M 1272 806 l 16 -6 M 1152 856 l -15 3 M 1290 872 l 15 3 M 1132 930 l -14 8 M 1310 946 l 14 8 M 1112 1000 l -12 10 M 1332 1014 l 12 10" stroke-opacity="0.4" stroke-width="1"/>
+      <path d="M 1198 712 l -10 -12 M 1244 724 l 10 -12 M 1150 890 l -11 -7 M 1296 906 l 11 -7" stroke="#d6c4a8" stroke-opacity="0.5" stroke-width="1"/>
+    </g>
+
+    <g id="clouds-front">
+      <path d="M 64 828 C 150 806 262 850 362 831 C 442 817 508 840 566 827" stroke-opacity="0.42" stroke-width="2.5"/>
+      <path d="M 108 862 C 192 842 300 880 402 863 C 472 852 522 868 566 858" stroke-opacity="0.3" stroke-width="2"/>
+      <path d="M 158 893 C 240 878 330 904 430 891" stroke-opacity="0.2" stroke-width="1.5"/>
+      <path d="M 96 800 C 150 790 210 806 262 797" stroke="#d6c4a8" stroke-opacity="0.28" stroke-width="1"/>
+      <path d="M 476 948 C 596 928 736 960 876 943 C 976 932 1056 948 1120 941" stroke-opacity="0.16" stroke-width="2"/>
+      <path d="M 1058 898 C 1160 878 1296 914 1418 895 C 1468 888 1518 900 1560 893" stroke-opacity="0.3" stroke-width="2.5"/>
+      <path d="M 1096 934 C 1216 914 1356 946 1498 927" stroke-opacity="0.2" stroke-width="1.5"/>
+      <path d="M 1140 868 C 1190 860 1246 874 1300 866" stroke="#d6c4a8" stroke-opacity="0.25" stroke-width="1"/>
+    </g>
+
+  </g>
+</svg>

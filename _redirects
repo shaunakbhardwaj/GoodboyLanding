@@ -1,0 +1,2 @@
+/blog      /blog.html    200
+/blog/*    /post.html    200

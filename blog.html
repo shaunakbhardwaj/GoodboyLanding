@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog — Goodboy Dynamics</title>
+    <meta
+      name="description"
+          content="Field notes from Goodboy Dynamics on precision manufacturing, supply chains and connected operations."
+    />
+    <link rel="preconnect" href="https://api.fontshare.com" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/blog.css" />
+    <link rel="stylesheet" href="/css/navigation.css" />
+    <script src="/js/navigation.js" defer></script>
+  </head>
+  <body data-page="index">
+    <a class="skip-link" href="#entries">Skip to content</a>
+
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Goodboy Dynamics home">
+        <img class="brand__mark" src="assets/goodboysvg.svg" alt="Goodboy" />
+        <span class="brand__sub">Dynamics</span>
+      </a>
+      <a class="topbar__link" href="/">Back to home</a>
+    </header>
+
+    <main id="top">
+      <section class="page-head" aria-label="Blog">
+        <div class="page-head__wash" aria-hidden="true"></div>
+        <div class="page-head__inner">
+          <p class="page-head__eyebrow">The Workshop Log</p>
+          <h1 class="page-head__title">Blog</h1>
+          <p class="page-head__sub">
+            Field notes on precision manufacturing, supply chains and the
+            connected systems that help complex operations work better.
+          </p>
+        </div>
+      </section>
+
+      <section class="entries" id="entries">
+        <div class="entries__inner">
+          <div class="skeleton" id="entries-skeleton" aria-hidden="true">
+            <div class="skeleton__row">
+              <div class="skeleton__media"></div>
+              <div class="skeleton__lines">
+                <div class="skeleton__line" style="width: 34%"></div>
+                <div class="skeleton__line" style="width: 82%"></div>
+                <div class="skeleton__line" style="width: 61%"></div>
+              </div>
+            </div>
+            <div class="skeleton__row">
+              <div class="skeleton__media"></div>
+              <div class="skeleton__lines">
+                <div class="skeleton__line" style="width: 28%"></div>
+                <div class="skeleton__line" style="width: 74%"></div>
+                <div class="skeleton__line" style="width: 55%"></div>
+              </div>
+            </div>
+          </div>
+          <ol class="entries__list" id="entries-list" hidden></ol>
+          <div class="status" id="entries-status" role="status" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div class="foot__inner">
+        <a class="brand" href="/" aria-label="Goodboy Dynamics home">
+          <img class="brand__mark" src="assets/goodboysvg.svg" alt="Goodboy" />
+          <span class="brand__sub">Dynamics</span>
+        </a>
+        <p class="foot__legal">© 2026 Goodboy Dynamics. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.8/dist/lenis.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/blog.js"></script>
+  </body>
+</html>

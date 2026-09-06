@@ -1,0 +1,10 @@
+# Local reference website — never publish with Goodboy Landing.
+/skunk works/
+
+# Machine files, dependencies, and local secrets.
+.DS_Store
+node_modules/
+.env
+.env.*
+!.env.example
+*.log

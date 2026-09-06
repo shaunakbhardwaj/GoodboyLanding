@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <title>Arc core</title>
+  <defs>
+    <linearGradient id="sweepGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f6f3ee" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#f6f3ee" stop-opacity="0.06"/>
+    </linearGradient>
+    <pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="9" cy="9" r="0.9" fill="#f6f3ee"/>
+    </pattern>
+  </defs>
+
+  <!-- full-bleed ground -->
+  <rect x="0" y="0" width="1600" height="1000" fill="#2a2824"/>
+
+  <!-- drafting sheet border + corner registration -->
+  <rect x="36" y="36" width="1528" height="928" fill="none" stroke="#f6f3ee" stroke-opacity="0.08" stroke-width="1"/>
+  <path d="M 20 36 H 52 M 36 20 V 52 M 1548 36 H 1580 M 1564 20 V 52 M 20 964 H 52 M 36 948 V 980 M 1548 964 H 1580 M 1564 948 V 980" fill="none" stroke="#f6f3ee" stroke-opacity="0.2" stroke-width="1"/>
+
+  <!-- core axis centerlines (flank the calm center, never enter it) -->
+  <path d="M 60 500 H 470 M 1130 500 H 1540 M 800 60 V 270 M 800 730 V 940" fill="none" stroke="#f6f3ee" stroke-opacity="0.12" stroke-width="1" stroke-dasharray="26 8 6 8"/>
+  <!-- secondary dial centerlines -->
+  <path d="M 1124 160 H 1556 M 1330 8 V 332" fill="none" stroke="#f6f3ee" stroke-opacity="0.15" stroke-width="1" stroke-dasharray="26 8 6 8"/>
+  <!-- tertiary dial centerlines -->
+  <path d="M 20 870 H 340 M 170 726 V 984" fill="none" stroke="#f6f3ee" stroke-opacity="0.12" stroke-width="1" stroke-dasharray="26 8 6 8"/>
+
+  <!-- datum targets -->
+  <path d="M 1236 640 H 1264 M 1250 626 V 654 M 336 270 H 364 M 350 256 V 284" fill="none" stroke="#f6f3ee" stroke-opacity="0.22" stroke-width="1"/>
+  <circle cx="1250" cy="640" r="8.5" fill="none" stroke="#f6f3ee" stroke-opacity="0.2" stroke-width="1"/>
+  <circle cx="350" cy="270" r="8.5" fill="none" stroke="#f6f3ee" stroke-opacity="0.2" stroke-width="1"/>
+
+  <!-- ============ ARC CORE : concentric ring engine, hollow center ============ -->
+  <!-- static construction circles -->
+  <circle cx="800" cy="500" r="430" fill="none" stroke="#f6f3ee" stroke-opacity="0.1" stroke-width="1"/>
+  <circle cx="800" cy="500" r="880" fill="none" stroke="#f6f3ee" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- rotating tick + segment rings -->
+  <circle cx="800" cy="500" r="444" fill="none" stroke="#f6f3ee" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="3 9">
+    <animateTransform attributeName="transform" type="rotate" from="0 800 500" to="360 800 500" dur="22s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="800" cy="500" r="458" fill="none" stroke="#f6f3ee" stroke-opacity="0.16" stroke-width="1.5" stroke-dasharray="1.2 10.8">
+    <animateTransform attributeName="transform" type="rotate" from="0 800 500" to="-360 800 500" dur="16s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="800" cy="500" r="472" fill="none" stroke="#f6f3ee" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="12 5 2 5">
+    <animateTransform attributeName="transform" type="rotate" from="0 800 500" to="360 800 500" dur="24s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="800" cy="500" r="532" fill="none" stroke="#f6f3ee" stroke-opacity="0.24" stroke-width="1.5" stroke-dasharray="36 22">
+    <animateTransform attributeName="transform" type="rotate" from="0 800 500" to="-360 800 500" dur="19s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="800" cy="500" r="556" fill="none" stroke="#f6f3ee" stroke-opacity="0.14" stroke-width="1" stroke-dasharray="1.5 13.5">
+    <animateTransform attributeName="transform" type="rotate" from="0 800 500" to="360 800 500" dur="17s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="800" cy="500" r="612" fill="none" stroke="#f6f3ee" stroke-opacity="0.12" stroke-width="1" stroke-dasharray="2 26">
+    <animateTransform attributeName="transform" type="rotate" from="0 800 500" to="360 800 500" dur="20s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="800" cy="500" r="690" fill="none" stroke="#f6f3ee" stroke-opacity="0.16" stroke-width="1" stroke-dasharray="60 14 6 14">
+    <animateTransform attributeName="transform" type="rotate" from="0 800 500" to="360 800 500" dur="24s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="800" cy="500" r="740" fill="none" stroke="#f6f3ee" stroke-opacity="0.1" stroke-width="1" stroke-dasharray="1 30">
+    <animateTransform attributeName="transform" type="rotate" from="0 800 500" to="-360 800 500" dur="18s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="800" cy="500" r="800" fill="none" stroke="#f6f3ee" stroke-opacity="0.12" stroke-width="1" stroke-dasharray="90 40">
+    <animateTransform attributeName="transform" type="rotate" from="0 800 500" to="360 800 500" dur="22s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- screentone dotted band -->
+  <circle cx="800" cy="500" r="575" fill="none" stroke="url(#dots)" stroke-width="9" opacity="0.3"/>
+
+  <!-- heavy machined segments, slow cw -->
+  <g fill="none" stroke="#f6f3ee" stroke-opacity="0.45" stroke-width="2">
+    <animateTransform attributeName="transform" type="rotate" from="0 800 500" to="360 800 500" dur="18s" repeatCount="indefinite"/>
+    <path d="M 1296 500 A 496 496 0 0 1 1017.4 945.8"/>
+    <path d="M 552 929.5 A 496 496 0 0 1 305.2 465.4"/>
+    <path d="M 552 70.5 A 496 496 0 0 1 1077.4 88.8"/>
+  </g>
+
+  <!-- accent glint arc -->
+  <path d="M 1321 500 A 521 521 0 0 1 1268.3 728.4" fill="none" stroke="#d6c4a8" stroke-opacity="0.7" stroke-width="2">
+    <animateTransform attributeName="transform" type="rotate" from="0 800 500" to="360 800 500" dur="21s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- long counter-rotating arcs -->
+  <g fill="none" stroke="#f6f3ee" stroke-opacity="0.2" stroke-width="1.5">
+    <animateTransform attributeName="transform" type="rotate" from="0 800 500" to="-360 800 500" dur="15s" repeatCount="indefinite"/>
+    <path d="M 1448 500 A 648 648 0 0 1 383.5 996.4"/>
+    <path d="M 152 500 A 648 648 0 0 1 1216.5 3.6"/>
+  </g>
+
+  <!-- energy chase : six arcs brightening in sequence -->
+  <g fill="none" stroke="#f6f3ee" stroke-width="2" opacity="0.08">
+    <animateTransform attributeName="transform" type="rotate" from="0 800 500" to="-360 800 500" dur="23s" repeatCount="indefinite"/>
+    <path d="M 1388 500 A 588 588 0 0 1 1365.2 662.1">
+      <animate attributeName="opacity" values="0.08;0.65;0.08" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" dur="12s" begin="0s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 1094 1009.2 A 588 588 0 0 1 942.3 1070.5">
+      <animate attributeName="opacity" values="0.08;0.65;0.08" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" dur="12s" begin="-2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 506 1009.2 A 588 588 0 0 1 377 908.5">
+      <animate attributeName="opacity" values="0.08;0.65;0.08" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" dur="12s" begin="-4s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 212 500 A 588 588 0 0 1 234.8 337.9">
+      <animate attributeName="opacity" values="0.08;0.65;0.08" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" dur="12s" begin="-6s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 506 -9.2 A 588 588 0 0 1 657.7 -70.5">
+      <animate attributeName="opacity" values="0.08;0.65;0.08" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" dur="12s" begin="-8s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 1094 -9.2 A 588 588 0 0 1 1223 91.5">
+      <animate attributeName="opacity" values="0.08;0.65;0.08" keyTimes="0;0.5;1" calcMode="spline" keySplines="0.4 0 0.6 1;0.4 0 0.6 1" dur="12s" begin="-10s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- static radial hairlines -->
+  <path d="M 1232 500 L 1360 500 M 1174.1 716 L 1285 780 M 1016 874.1 L 1080 985 M 800 932 L 800 1060 M 584 874.1 L 520 985 M 425.9 716 L 315 780 M 368 500 L 240 500 M 425.9 284 L 315 220 M 584 125.9 L 520 15 M 800 68 L 800 -60 M 1016 125.9 L 1080 15 M 1174.1 284 L 1285 220" fill="none" stroke="#f6f3ee" stroke-opacity="0.1" stroke-width="1"/>
+  <path d="M 1317.4 714.3 L 1502.1 790.8 M 1014.3 1017.4 L 1090.8 1202.1 M 585.7 1017.4 L 509.2 1202.1 M 282.6 714.3 L 97.9 790.8 M 282.6 285.7 L 97.9 209.2 M 585.7 -17.4 L 509.2 -202.1 M 1014.3 -17.4 L 1090.8 -202.1 M 1317.4 285.7 L 1502.1 209.2" fill="none" stroke="#f6f3ee" stroke-opacity="0.06" stroke-width="1"/>
+  <!-- fine comparator ticks -->
+  <path d="M 1400 500 L 1416 500 M 1390.9 604.2 L 1406.6 607 M 1363.8 705.2 L 1378.9 710.7 M 1319.6 800 L 1333.5 808 M 1259.6 885.7 L 1271.9 896 M 1185.7 959.6 L 1196 971.9 M 1100 1019.6 L 1108 1033.5 M 1005.2 1063.8 L 1010.7 1078.9 M 904.2 1090.9 L 907 1106.6 M 800 1100 L 800 1116 M 695.8 1090.9 L 693 1106.6 M 594.8 1063.8 L 589.3 1078.9 M 500 1019.6 L 492 1033.5 M 414.3 959.6 L 404 971.9 M 340.4 885.7 L 328.1 896 M 280.4 800 L 266.5 808 M 236.2 705.2 L 221.1 710.7 M 209.1 604.2 L 193.4 607 M 200 500 L 184 500 M 209.1 395.8 L 193.4 393 M 236.2 294.8 L 221.1 289.3 M 280.4 200 L 266.5 192 M 340.4 114.3 L 328.1 104 M 414.3 40.4 L 404 28.1 M 500 -19.6 L 492 -33.5 M 594.8 -63.8 L 589.3 -78.9 M 695.8 -90.9 L 693 -106.6 M 800 -100 L 800 -116 M 904.2 -90.9 L 907 -106.6 M 1005.2 -63.8 L 1010.7 -78.9 M 1100 -19.6 L 1108 -33.5 M 1185.7 40.4 L 1196 28.1 M 1259.6 114.3 L 1271.9 104 M 1319.6 200 L 1333.5 192 M 1363.8 294.8 L 1378.9 289.3 M 1390.9 395.8 L 1406.6 393" fill="none" stroke="#f6f3ee" stroke-opacity="0.08" stroke-width="1"/>
+
+  <!-- soft energy sweep through the ring band -->
+  <path d="M 1222.6 410.2 L 1696 309.6 A 916 916 0 0 1 1696 690.4 L 1222.6 589.8 A 432 432 0 0 0 1222.6 410.2 Z" fill="url(#sweepGrad)">
+    <animateTransform attributeName="transform" type="rotate" from="0 800 500" to="360 800 500" dur="24s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- ============ SECONDARY DIAL : upper right ============ -->
+  <g>
+    <circle cx="1330" cy="160" r="48" fill="none" stroke="#f6f3ee" stroke-opacity="0.12" stroke-width="1"/>
+    <circle cx="1330" cy="160" r="70" fill="none" stroke="#f6f3ee" stroke-opacity="0.3" stroke-width="1" stroke-dasharray="2 6">
+      <animateTransform attributeName="transform" type="rotate" from="0 1330 160" to="360 1330 160" dur="12s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1330" cy="160" r="92" fill="none" stroke="#f6f3ee" stroke-opacity="0.35" stroke-width="1.5" stroke-dasharray="14 8">
+      <animateTransform attributeName="transform" type="rotate" from="0 1330 160" to="-360 1330 160" dur="16s" repeatCount="indefinite"/>
+    </circle>
+    <path d="M 1310.6 49.7 A 112 112 0 1 1 1310.6 270.3" fill="none" stroke="#f6f3ee" stroke-opacity="0.45" stroke-width="2">
+      <animateTransform attributeName="transform" type="rotate" from="0 1330 160" to="360 1330 160" dur="20s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 1233.5 241 A 126 126 0 0 1 1204.7 173.2" fill="none" stroke="#d6c4a8" stroke-opacity="0.7" stroke-width="2">
+      <animateTransform attributeName="transform" type="rotate" from="0 1330 160" to="-360 1330 160" dur="24s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="1330" cy="160" r="140" fill="none" stroke="#f6f3ee" stroke-opacity="0.15" stroke-width="1" stroke-dasharray="1 10">
+      <animateTransform attributeName="transform" type="rotate" from="0 1330 160" to="360 1330 160" dur="18s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1330" cy="160" r="4" fill="#f6f3ee" opacity="0.45"/>
+  </g>
+
+  <!-- ============ TERTIARY DIAL : lower left ============ -->
+  <g>
+    <circle cx="170" cy="870" r="84" fill="none" stroke="#f6f3ee" stroke-opacity="0.2" stroke-width="1" stroke-dasharray="10 7">
+      <animateTransform attributeName="transform" type="rotate" from="0 170 870" to="-360 170 870" dur="14s" repeatCount="indefinite"/>
+    </circle>
+    <path d="M 265.3 815 A 110 110 0 0 1 115 965.3" fill="none" stroke="#f6f3ee" stroke-opacity="0.25" stroke-width="1.5">
+      <animateTransform attributeName="transform" type="rotate" from="0 170 870" to="360 170 870" dur="20s" repeatCount="indefinite"/>
+    </path>
+    <circle cx="170" cy="870" r="132" fill="none" stroke="#f6f3ee" stroke-opacity="0.12" stroke-width="1" stroke-dasharray="2 20">
+      <animateTransform attributeName="transform" type="rotate" from="0 170 870" to="-360 170 870" dur="24s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="170" cy="870" r="3.5" fill="#f6f3ee" opacity="0.3"/>
+  </g>
+</svg>
