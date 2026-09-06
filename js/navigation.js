@@ -4,7 +4,7 @@
   const nav = document.createElement('nav');
   nav.className = 'pill-nav';
   nav.setAttribute('aria-label', 'Main navigation');
-  nav.innerHTML = `<a class="pill-nav__brand" href="/" aria-label="Goodboy Dynamics home"><img src="/assets/goodboysvg.svg" width="1775" height="388" alt=""></a><div class="pill-nav__items"><a href="${hero ? '' : '/'}#about">About</a><a href="${hero ? '' : '/'}#focus">Focus</a><a href="/blog.html" ${hero ? '' : 'aria-current="page"'}>Journal</a><a href="${hero ? '' : '/'}#contact">Contact</a></div>`;
+  nav.innerHTML = `<a class="pill-nav__brand" href="./" aria-label="Goodboy Dynamics home"><img src="assets/goodboysvg.svg" width="1775" height="388" alt=""></a><div class="pill-nav__items"><a href="${hero ? '' : './'}#about">About</a><a href="${hero ? '' : './'}#focus">Focus</a><a href="blog.html" ${hero ? '' : 'aria-current="page"'}>Journal</a><a href="${hero ? '' : './'}#contact">Contact</a></div>`;
   document.body.prepend(nav);
   const brand = nav.querySelector('.pill-nav__brand');
   const target = brand.querySelector('img');

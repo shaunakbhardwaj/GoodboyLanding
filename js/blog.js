@@ -340,7 +340,7 @@
   /* -------------------------------------------------------- views */
 
   function postHref(slug) {
-    return LIVE ? `/blog/${slug}` : `post.html?slug=${slug}`;
+    return `post.html?slug=${encodeURIComponent(slug)}`;
   }
 
   function renderIndex(posts) {
@@ -387,7 +387,7 @@
 
     skeleton.hidden = true;
     container.innerHTML = `
-      <a class="article__back" href="${LIVE ? "/blog" : "blog.html"}">All posts</a>
+      <a class="article__back" href="blog.html">All posts</a>
       <h1 class="article__title">${esc(post.title)}</h1>
       <p class="article__meta">
         <span>${esc(formatDate(post.publishedAt))}</span>
@@ -460,7 +460,7 @@
   async function initPost() {
     const slug = slugFromLocation();
     if (!slug) {
-      location.replace(LIVE ? "/blog" : "blog.html");
+      location.replace("blog.html");
       return;
     }
     try {
