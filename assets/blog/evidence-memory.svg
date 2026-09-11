@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Memory with evidence and correction history</title>
+  <desc id="desc">Two source records support two assertions. March supersedes February. A scope gate admits the current assertion and its source reference to a compact retrieval context while preserving the earlier history.</desc>
+  <style>
+    text{font-family:Arial,Helvetica,sans-serif;fill:#eeeae0;font-size:24px}
+    .label{font-size:22px;letter-spacing:2px;fill:#d6cbb4}
+    .small{font-size:22px}.muted{opacity:.52}.frame{fill:none;stroke:#eeeae0;stroke-opacity:.3;stroke-width:2}
+    .line{fill:none;stroke:#d6cbb4;stroke-width:2}.dash{stroke-dasharray:6 8}
+    .arrive{animation:arrive 3.4s ease-out 1}.history{opacity:.4;animation:history 3.4s ease-out 1}
+    .trace{animation:trace 4.8s ease-out 1}
+    @keyframes arrive{0%,22%{opacity:.12}60%,100%{opacity:1}}
+    @keyframes history{0%,22%{opacity:1}60%,100%{opacity:.4}}
+    @keyframes trace{0%,42%{opacity:.08}80%,100%{opacity:1}}
+    @media(prefers-reduced-motion:reduce){.arrive,.history,.trace{animation:none}}
+  </style>
+  <rect width="1200" height="800" fill="#1b1b19"/>
+  <text x="80" y="100" class="label">MEMORY / EVIDENCE RETAINED</text>
+  <text x="80" y="151" font-size="34" style="font-size:34px">A correction changes recall. It keeps the receipt.</text>
+  <path d="M80 185H1120" class="frame"/>
+  <text x="100" y="244" class="label">SOURCE RECORDS</text>
+  <text x="440" y="244" class="label">ASSERTIONS</text>
+  <text x="835" y="244" class="label">CONTEXT</text>
+  <rect x="80" y="278" width="680" height="380" rx="4" class="frame"/>
+  <text x="100" y="632" class="label">PRIVATE SCOPE</text>
+  <g class="history">
+    <rect x="100" y="305" width="245" height="104" rx="3" class="frame"/>
+    <text x="120" y="341" class="label">T1 / SOURCE 01</text>
+    <text x="120" y="380">“Use February”</text>
+    <path d="M345 357H426M416 350L426 357L416 364" class="line"/>
+    <rect x="440" y="305" width="290" height="104" rx="3" class="frame"/>
+    <text x="460" y="343">BASELINE → FEB</text>
+    <text x="460" y="380" class="label">SUPERSEDED</text>
+  </g>
+  <g class="arrive">
+    <rect x="100" y="488" width="245" height="104" rx="3" class="frame"/>
+    <text x="120" y="524" class="label">T2 / SOURCE 02</text>
+    <text x="120" y="563">“Use March”</text>
+    <path d="M345 540H426M416 533L426 540L416 547" class="line"/>
+    <rect x="440" y="488" width="290" height="104" rx="3" fill="#d6cbb4" fill-opacity=".07" stroke="#d6cbb4" stroke-width="2"/>
+    <text x="460" y="526">BASELINE → MAR</text>
+    <text x="460" y="563" class="label">CURRENT</text>
+    <path d="M585 481V420M578 430L585 420L592 430" class="line"/>
+    <rect x="599" y="430" width="140" height="30" fill="#1b1b19"/>
+    <text x="607" y="452" class="small">supersedes</text>
+  </g>
+  <g class="trace">
+    <path d="M730 540H820V402H850M840 395L850 402L840 409" class="line"/>
+    <path d="M787 499V579M797 499V579" class="line"/>
+    <rect x="858" y="307" width="262" height="238" rx="3" fill="#d6cbb4" fill-opacity=".05" stroke="#d6cbb4" stroke-width="2"/>
+    <text x="880" y="352" class="label">RECALL PACK</text>
+    <path d="M880 373H1098" class="frame"/>
+    <text x="880" y="414">Use March</text>
+    <text x="880" y="458" class="small">Evidence: source 02</text>
+    <text x="880" y="504" class="label">IN SCOPE</text>
+    <text x="860" y="597" class="small">Scope checked</text>
+    <text x="860" y="628" class="small">before retrieval.</text>
+  </g>
+  <path d="M80 697H1120" class="frame"/>
+  <text x="80" y="744" class="small muted">History stays inspectable. Only current, authorized claims enter the context.</text>
+</svg>

@@ -486,9 +486,8 @@ h3 {
   background-size: cover;
 }
 
-.note-card__visual--one { background-image: url("../hero-concepts/01-string-field.svg"); }
-.note-card__visual--two { background-image: url("../hero-concepts/05-arc-core.svg"); }
-.note-card__visual--three { background-image: url("../hero-concepts/06-mycelium-signal.svg"); }
+
+.note-card__visual img { width: 100%; height: 100%; object-fit: contain; background: #1b1b19; }
 
 .note-card__visual::after {
   content: "";

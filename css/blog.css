@@ -491,17 +491,6 @@ h4 {
   color: var(--mute-2);
 }
 
-.demo-note {
-  width: min(100% - (var(--pad) * 2), 900px);
-  margin: 0 auto clamp(3rem, 7vh, 5rem);
-  padding: 0.85rem 1.1rem;
-  border: 1px dashed var(--line);
-  border-radius: 10px;
-  font-size: 0.78rem;
-  letter-spacing: 0.04em;
-  color: var(--mute-2);
-  text-align: center;
-}
 
 .progress {
   position: fixed;
@@ -646,3 +635,14 @@ h4 {
     display: none;
   }
 }
+
+/* Research article deck and finite, replayable SVG illustrations. */
+.article__deck { margin-top: 1.35rem; font-size: 1.08rem; line-height: 1.65; color: var(--ink-soft); }
+.cover { margin-inline: 0; }
+.illustration-replay { display: inline-flex; gap: .6rem; align-items: center; margin-top: .8rem; padding: .35rem 0; border: 0; border-bottom: 1px solid var(--line); background: transparent; color: var(--ink-soft); font: inherit; font-size: .75rem; cursor: pointer; }
+.illustration-replay:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+@media(prefers-reduced-motion: reduce) { .illustration-replay { display: none; } }
+
+.illustration-controls { display: flex; flex-wrap: wrap; align-items: baseline; gap: .6rem 1.5rem; }
+.illustration-open { font-size: .75rem; color: var(--ink-soft); border-bottom: 1px solid var(--line); padding-bottom: .35rem; }
+.illustration-open:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }

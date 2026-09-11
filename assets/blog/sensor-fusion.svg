@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+<title id="title">Observations become an assessment without losing their source</title>
+<desc id="desc">Three source lanes feed an association stage. Two reports share an origin; a separate observation adds evidence. The output keeps uncertainty and source history visible. A short animation traces the paths, then settles.</desc>
+<style>
+text{font-family:ui-monospace,monospace;fill:#eeeae0;font-size:22px;letter-spacing:1px}.small{font-size:18px;fill:#aaa69c}.line{fill:none;stroke:#eeeae0;stroke-width:1.5}.dim{stroke:#68655e}.accent{stroke:#d6cbb4}.packet{fill:none;stroke:#d6cbb4;stroke-width:3;stroke-dasharray:20 700;animation:travel 4.8s ease-out both}.out{animation:appear 4.8s ease both}.ring{transform-origin:600px 400px;animation:settle 4.8s ease both}@keyframes travel{0%{stroke-dashoffset:60;opacity:0}15%{opacity:1}75%{stroke-dashoffset:-510;opacity:1}100%{stroke-dashoffset:-650;opacity:0}}@keyframes appear{0%,48%{opacity:.15}100%{opacity:1}}@keyframes settle{0%{transform:rotate(-18deg);opacity:.3}100%{transform:rotate(0);opacity:1}}@media(prefers-reduced-motion:reduce){*{animation:none!important}.packet{display:none}}
+</style>
+<rect width="1200" height="800" fill="#1b1b19"/>
+<g class="line dim" opacity=".5"><path d="M48 108H1152M48 692H1152M600 130V670"/><path d="M48 92v32M1152 92v32M48 676v32M1152 676v32"/></g>
+<text x="64" y="74">01 / EVIDENCE FUSION</text><text class="small" x="64" y="742">SOURCE → ASSOCIATION → ASSESSMENT</text>
+<g class="line"><rect x="80" y="210" width="240" height="80"/><rect x="80" y="360" width="240" height="80"/><rect x="80" y="510" width="240" height="80"/></g>
+<text x="104" y="257">SITE REPORT</text><text x="104" y="407">REPORTED COPY</text><text x="104" y="557">OBSERVATION</text>
+<path class="line dim" stroke-dasharray="4 7" d="M72 250H48V400H72"/><text class="small" x="80" y="182">SHARED ORIGIN</text>
+<g class="line dim"><path d="M320 250H395L518 350M320 400H500M320 550H395L518 450M700 400H820"/></g>
+<path class="packet" d="M320 250H395L518 350M320 400H500"/><path class="packet" d="M320 550H395L518 450"/>
+<g class="line ring"><ellipse cx="600" cy="400" rx="100" ry="132" transform="rotate(35 600 400)"/><ellipse class="accent" cx="600" cy="400" rx="100" ry="132" transform="rotate(-35 600 400)"/><circle cx="600" cy="400" r="35"/><path d="M585 400h30M600 385v30"/></g>
+<text class="small" text-anchor="middle" x="600" y="602">CHECK DEPENDENCE</text>
+<g class="out"><rect class="line accent" x="820" y="300" width="300" height="200"/><text x="845" y="344">ASSESSMENT</text><path class="line dim" d="M840 365H1100"/><text class="small" x="845" y="400">SOURCES RETAINED</text><text class="small" x="845" y="436">GAPS VISIBLE</text><text class="small" x="845" y="472">OPEN TO REVISION</text></g>
+</svg>

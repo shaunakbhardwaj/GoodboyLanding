@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">From a spoken thought to an authorized job</title>
+  <desc id="desc">A waveform enters a preserved source transcript. A structured brief adds an objective, context, and constraints. An explicit review gate separates local capture from an authorized job. The source remains available throughout.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M1 1 8 5 1 9" fill="none" stroke="#d6cbb4" stroke-width="1.8"/></marker>
+  </defs>
+  <style>
+    text{font-family:'Courier New',monospace;fill:#eeeae0;font-size:24px}
+    .small{font-size:22px;fill:#d6cbb4}.heading{font-size:28px;letter-spacing:2px}
+    .line{fill:none;stroke:#eeeae0;stroke-width:1.8}.muted{stroke:#d6cbb4;opacity:.45}
+    .route{fill:none;stroke:#d6cbb4;stroke-width:2;marker-end:url(#arrow)}
+    .signal{fill:none;stroke:#eeeae0;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:900;animation:signal 1.2s ease-out both}
+    .source{animation:source 1.8s ease-out both}.brief{animation:brief 2.8s ease-out both}.review{animation:review 3.7s ease-out both}.job{animation:job 4.8s ease-out both}
+    @keyframes signal{from{stroke-dashoffset:900}to{stroke-dashoffset:0}}
+    @keyframes source{0%,25%{opacity:.18}100%{opacity:1}}
+    @keyframes brief{0%,45%{opacity:.18}100%{opacity:1}}
+    @keyframes review{0%,62%{opacity:.18}100%{opacity:1}}
+    @keyframes job{0%,75%{opacity:.18}100%{opacity:1}}
+    @media(prefers-reduced-motion:reduce){.signal,.source,.brief,.review,.job{animation:none}}
+  </style>
+  <path fill="#1b1b19" d="M0 0h1200v800H0z"/>
+  <g class="line muted"><path d="M74 132h1052M74 682h1052"/><path d="M74 122v20m1052-20v20M74 672v20m1052-20v20"/></g>
+  <text x="90" y="105" class="small">01 / VOICE WORKSPACE</text>
+  <text x="1110" y="105" text-anchor="end" class="small">CAPTURE → COMMIT</text>
+  <text x="110" y="205" class="heading">A THOUGHT IS NOT YET A TASK.</text>
+  <text x="110" y="246" class="small">Preserve the words. Review the intent.</text>
+  <g class="source">
+    <text x="115" y="330" class="small">SPOKEN INPUT</text>
+    <path class="signal" d="M115 373h16l7-13 8 29 8-52 8 70 8-49 8 22 8-12h15l8-38 8 87 8-67 8 38 8-17h13"/>
+    <path class="route" d="M284 373h44"/>
+    <rect x="340" y="300" width="245" height="180" rx="2" class="line"/>
+    <text x="364" y="340" class="heading">SOURCE</text>
+    <path class="line muted" d="M364 360h197"/>
+    <text x="364" y="399">Original words</text>
+    <text x="364" y="442" class="small">Saved locally</text>
+    <path class="line muted" d="M350 490h245V310"/>
+    <path class="line muted" d="M360 500h245V320"/>
+  </g>
+  <g class="brief">
+    <path class="route" d="M613 373h45"/>
+    <rect x="670" y="300" width="280" height="180" rx="2" class="line"/>
+    <text x="694" y="340" class="heading">BRIEF</text>
+    <path class="line muted" d="M694 360h232"/>
+    <text x="694" y="391">Objective</text>
+    <text x="694" y="425">Context</text>
+    <text x="694" y="459">Constraints</text>
+  </g>
+  <g class="review">
+    <path class="route" d="M810 480v50"/>
+    <path fill="#d6cbb4" fill-opacity=".07" stroke="#d6cbb4" stroke-width="2" d="M670 544h280v64H670z"/>
+    <text x="810" y="585" text-anchor="middle">EXPLICIT REVIEW</text>
+    <path class="route" d="M950 576h45"/>
+  </g>
+  <g class="job">
+    <rect x="1007" y="544" width="105" height="64" class="line" rx="2"/>
+    <text x="1059" y="585" text-anchor="middle">JOB</text>
+    <path class="line muted" d="M1059 608v35H462V516" stroke-dasharray="5 7"/>
+    <path fill="#1b1b19" d="M598 627h325v32H598z"/>
+    <text x="760" y="650" text-anchor="middle" class="small">Source stays linked</text>
+  </g>
+  <path class="line muted" d="M462 480v75h-95"/>
+  <text x="115" y="550" class="small">MODEL UNAVAILABLE?</text>
+  <text x="115" y="582">The capture survives.</text>
+  <text x="90" y="726" class="small">SAVED ≠ AUTHORIZED</text>
+  <text x="1110" y="726" text-anchor="end" class="small">GOODBOY / SYSTEMS NOTES</text>
+</svg>

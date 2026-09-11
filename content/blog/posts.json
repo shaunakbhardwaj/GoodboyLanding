@@ -1,0 +1,54 @@
+[
+  {
+    "slug": "sensor-fusion-without-false-certainty",
+    "title": "Sensor fusion should preserve doubt",
+    "excerpt": "Combining physical signals without confusing agreement with independent evidence.",
+    "category": "Research / 001",
+    "publishedAt": "2026-09-07T09:00:00Z",
+    "cover": {
+      "asset": "assets/blog/sensor-fusion.svg",
+      "alt": "Three observation paths feed an assessment that retains source relationships and uncertainty.",
+      "caption": "Illustrative evidence flow. Agreement between sources does not establish their independence.",
+      "animated": true
+    }
+  },
+  {
+    "slug": "a-factory-simulator-should-explain-a-late-part",
+    "title": "A factory simulator should be able to explain a late part",
+    "excerpt": "Inside Factory OS: finite buffers, shared workers, and the difference between a busy animation and a useful model.",
+    "category": "Factory OS / 002",
+    "publishedAt": "2026-09-07T09:00:00Z",
+    "cover": {
+      "asset": "assets/blog/factory-flow.svg",
+      "alt": "Paused inspection fills two buffer slots, leaving a third completed part blocked at processing.",
+      "caption": "Illustrative model: two waiting parts fill the buffer; the third remains on the processing machine.",
+      "animated": true
+    }
+  },
+  {
+    "slug": "memory-that-can-show-its-working",
+    "title": "A memory graph should be able to show its working",
+    "excerpt": "Notes from Julia on evidence, corrections, access boundaries, and context worth retrieving.",
+    "category": "Julia / 003",
+    "publishedAt": "2026-09-07T09:00:00Z",
+    "cover": {
+      "asset": "assets/blog/evidence-memory.svg",
+      "alt": "A new instruction supersedes an old assertion while source evidence remains behind a scope boundary.",
+      "caption": "A correction changes what is current without erasing the evidence for earlier decisions.",
+      "animated": true
+    }
+  },
+  {
+    "slug": "a-transcript-is-not-a-handoff",
+    "title": "A transcript is not a handoff",
+    "excerpt": "What Talkify needs to preserve between a passing thought, a reviewed brief, and a piece of work.",
+    "category": "Talkify / 004",
+    "publishedAt": "2026-09-07T09:00:00Z",
+    "cover": {
+      "asset": "assets/blog/voice-handoff.svg",
+      "alt": "Original speech is preserved as a source before a structured brief passes an explicit review gate to a job.",
+      "caption": "Source capture, interpretation, review, and execution are separate stages with separate responsibilities.",
+      "animated": true
+    }
+  }
+]
