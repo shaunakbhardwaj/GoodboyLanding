@@ -26,22 +26,40 @@
   target.style.visibility = 'hidden';
   document.body.append(flying);
   let pending = false;
+  let geometry = null;
+  let previousProgress = -1;
+  let needsMeasure = true;
+  const measure = () => {
+    // Measure only after layout changes, never during the scroll animation.
+    const from = placeholder.getBoundingClientRect();
+    const space = mobile() ? 86 : 120;
+    nav.style.setProperty('--logo-space', `${space}px`);
+    const to = target.getBoundingClientRect();
+    geometry = {
+      x: from.left, y: from.top + window.scrollY, width: from.width,
+      targetX: to.left, targetY: to.top, targetWidth: to.width,
+      distance: Math.max(220, hero.offsetHeight * 0.62), space,
+    };
+    previousProgress = -1;
+    needsMeasure = false;
+  };
   const update = () => {
     pending = false;
-    const from = placeholder.getBoundingClientRect();
-    const distance = Math.max(220, hero.offsetHeight * 0.62);
-    const raw = Math.min(1, Math.max(0, window.scrollY / distance));
+    if (needsMeasure) measure();
+    const g = geometry;
+    const raw = Math.min(1, Math.max(0, window.scrollY / g.distance));
     const progress = reduced.matches ? (raw > 0.12 ? 1 : 0) : raw * raw * (3 - 2 * raw);
-    nav.style.setProperty('--logo-space', `${(mobile() ? 86 : 120) * progress}px`);
+    if (progress === previousProgress) return;
+    previousProgress = progress;
+    nav.style.setProperty('--logo-space', `${g.space * progress}px`);
     brand.tabIndex = progress > 0.98 ? 0 : -1;
     brand.setAttribute('aria-hidden', String(progress <= 0.98));
     brand.style.pointerEvents = progress > 0.98 ? 'auto' : 'none';
-    const to = target.getBoundingClientRect();
-    const x = from.left + (to.left - from.left) * progress;
-    // Start from the unscrolled hero position so the logo never exits above the pill.
-    const initialY = from.top + window.scrollY;
-    const y = initialY + (to.top - initialY) * progress;
-    const width = from.width + (to.width - from.width) * progress;
+    // The centered pill grows by `space`; its logo center moves by half that.
+    const targetX = g.targetX - g.space * (1 - progress) / 2;
+    const x = g.x + (targetX - g.x) * progress;
+    const y = g.y + (g.targetY - g.y) * progress;
+    const width = g.width + (g.targetWidth - g.width) * progress;
     flying.style.transform = `translate3d(${x}px, ${y}px, 0) scale(${width / 560})`;
     sub.style.opacity = String(1 - Math.min(1, raw * 3));
   };
@@ -49,9 +67,20 @@
   update();
   if (window.scrollY < 10 && !reduced.matches) flying.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 850, easing: 'ease-out' });
   window.addEventListener('scroll', schedule, { passive: true });
-  window.addEventListener('resize', schedule);
-  new ResizeObserver(schedule).observe(lockup);
-  window.addEventListener('pageshow', schedule);
+  const invalidate = () => { needsMeasure = true; schedule(); };
+  // Safari's collapsing toolbar fires resize without changing layout width.
+  let viewportWidth = window.innerWidth;
+  window.addEventListener('resize', () => {
+    if (window.innerWidth !== viewportWidth || window.matchMedia('(pointer: fine)').matches) {
+      viewportWidth = window.innerWidth;
+      invalidate();
+    }
+  });
+  const layoutObserver = new ResizeObserver(invalidate);
+  layoutObserver.observe(hero);
+  layoutObserver.observe(lockup);
+  layoutObserver.observe(nav.querySelector('.pill-nav__items'));
+  window.addEventListener('pageshow', invalidate);
   reduced.addEventListener('change', schedule);
-  document.fonts.ready.then(schedule);
+  document.fonts.ready.then(invalidate);
 })();
